@@ -7,8 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.URL;
@@ -31,14 +31,14 @@ public class Notice extends DomainEntity {
 	@NotBlank
 	private String				title;
 
-	@NotNull
+	//@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
 	private Date				creation;
 
-	@NotNull
+	//@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	//@FutureOrPresent
+	@FutureOrPresent
 	private Date				deadline;
 
 	@NotBlank
