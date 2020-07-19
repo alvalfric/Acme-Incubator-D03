@@ -59,7 +59,7 @@
 		<property name="headerPicture" value="https://static1-sevilla.abc.es/media/sevilla/2020/06/22/s/fchada-univ-sevilla.jpg-kSxE--620x349@abc.jpg"/>
 		<property name="title" value="La Universidad de Sevilla volverá el próximo curso con los estudiantes rotando entre clases y sesiones on line"/>
 		<property name="creation" value="2020/07/09 00:00"/>
-		<property name="deadline" value="2019/12/30 00:00"/>
+		<property name="deadline" value="2020/12/30 00:00"/>
 		<property name="body" value="El Consejo de Gobierno de la Universidad de Sevilla ha aprobado el documento con los Criterios Académicos para la adaptación de las titulaciones oficiales de la US a las exigencias sanitarias causadas por la covid-19 durante el curso académico 2020-2021 que pretende una vuelta a clase con los estudiantes rotando. Unos días irán a clase y otros seguirán las sesiones de forma virtual."/>
 		<property name="relatedLink1" value=""/>
 		<property name="relatedLink2" value=""/>
@@ -79,7 +79,7 @@
 	<bean id="inquirie01" class ="acme.entities.inquiries.Inquirie">
 		<property name="title" value="Example Inquirie"/>
 		<property name="creation" value="2020/07/09 00:00"/>
-		<property name="deadline" value="2020/12/30 00:00"/>
+		<property name="deadline" value="2020/07/19 18:00"/>
 		<property name="body" value="Requesting assist."/>
 		<property name="minMoney" value="2000 €"/>
 		<property name="maxMoney" value="2000 €"/>

@@ -57,6 +57,7 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		Notice result;
 
 		result = new Notice();
+		result.setCreation(new Date(System.currentTimeMillis() - 1));
 
 		return result;
 	}
