@@ -11,7 +11,7 @@
 		<acme:form-url code="administrator.notice.form.label.headerPicture" path="headerPicture" />
 	</jstl:if>
 
-	<acme:form-textbox code="administrator.notice.form.label.title" path="title" />
+	<acme:form-textbox code="administrator.notice.form.label.title" path="title" placeholder="Title"/>
 
 	<jstl:if test="${command != 'create'}">
 		<acme:form-textbox code="administrator.notice.form.label.creation" path="creation" readonly="true"/>
@@ -20,7 +20,7 @@
 		<acme:form-textbox code="administrator.notice.form.label.deadline" path="deadline" />
 	</jstl:if>
 
-	<acme:form-textarea code="administrator.notice.form.label.body" path="body" />
+	<acme:form-textarea code="administrator.notice.form.label.body" path="body" placeholder="Body"/>
 
 	<jstl:if test="${command != 'show'}">
 		<acme:form-url code="administrator.notice.form.label.relatedLink1" path="relatedLink1" />

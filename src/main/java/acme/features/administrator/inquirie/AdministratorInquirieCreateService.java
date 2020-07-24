@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.inquiries.Inquirie;
-import acme.features.administrator.notice.AdministratorNoticeRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -18,7 +17,7 @@ import acme.framework.services.AbstractCreateService;
 public class AdministratorInquirieCreateService implements AbstractCreateService<Administrator, Inquirie> {
 
 	@Autowired
-	private AdministratorNoticeRepository repository;
+	private AdministratorInquireRepository repository;
 
 
 	@Override
@@ -63,15 +62,19 @@ public class AdministratorInquirieCreateService implements AbstractCreateService
 		assert errors != null;
 
 		if (!errors.hasErrors("deadline")) {
-			if (entity.getDeadline() == null) {
-				errors.state(request, entity.getDeadline() != null, "deadline", "inquirie.requests.error.null");
-			} else {
-				errors.state(request, !entity.getDeadline().before(new Date(System.currentTimeMillis())), "deadline", "inquirie.requests.error.futuro-deadline");
-			}
+			errors.state(request, !entity.getDeadline().before(new Date(System.currentTimeMillis())), "deadline", "administrator.inquirie.error.futuro-deadline");
+		}
+
+		if (!errors.hasErrors("minMoney")) {
+			errors.state(request, entity.getMinMoney().getCurrency().equals("EUR") || entity.getMinMoney().getCurrency().equals("€"), "minMoney", "administrator.inquirie.error.currency");
+		}
+
+		if (!errors.hasErrors("maxMoney")) {
+			errors.state(request, entity.getMaxMoney().getCurrency().equals("EUR") || entity.getMaxMoney().getCurrency().equals("€"), "maxMoney", "administrator.inquirie.error.currency");
 		}
 
 		if (!errors.hasErrors("minMoney") && !errors.hasErrors("maxMoney")) {
-			errors.state(request, entity.getMaxMoney().getAmount() >= entity.getMinMoney().getAmount(), "maxMoney", "inquirie.requests.error.money");
+			errors.state(request, entity.getMaxMoney().getAmount() >= entity.getMinMoney().getAmount(), "maxMoney", "administrator.inquirie.error.money");
 		}
 	}
 

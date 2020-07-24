@@ -46,8 +46,20 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 
-master.menu.administrator.notice.list = Listar Noticias
 master.menu.administrator.customization-parameter.show = Ver Parámetros de Customización
+
+master.menu.administrator.notice.create = Crear Noticia
+master.menu.administrator.notice.list = Listar Noticias
+master.menu.administrator.inquirie.create = Crear Investigación
+master.menu.administrator.inquirie.list = Listar Investigaciones
+master.menu.administrator.overture.create = Crear Propuesta
+master.menu.administrator.overture.list = Listar Propuestas
+master.menu.administrator.technology-record.create = Crear Registro Tecnológico
+master.menu.administrator.technology-record.list = Listar Registros Tecnológicos
+master.menu.administrator.tool-record.create = Crear Registro de Herramienta
+master.menu.administrator.tool-record.list = Listar Registros de Herramientas
+master.menu.administrator.challenge.create = Crear Reto
+master.menu.administrator.challenge.list = Listar Retos
 
 # master.menu.authenticated ###################################################
 

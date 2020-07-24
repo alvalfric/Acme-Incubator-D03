@@ -2,7 +2,6 @@
 package acme.features.administrator.inquirie;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +41,7 @@ public class AdministratorInquireListService implements AbstractListService<Admi
 
 		Collection<Inquirie> result;
 
-		result = this.repository.findManyAllActive(new Date());
+		result = this.repository.findManyAllActive();
 
 		return result;
 	}

@@ -2,7 +2,6 @@
 package acme.entities.customizationParameters;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
@@ -28,7 +27,6 @@ public class CustomizationParameter extends DomainEntity {
 
 	@NotNull
 	@PositiveOrZero
-	@DecimalMax(value = "99")
 	@Range(min = 0, max = 100)
 	private Double				spamThreshold;
 }

@@ -182,7 +182,7 @@
 	<bean id="spamwords" class="acme.entities.customizationParameters.CustomizationParameter">
 		<property name="id" value="1"/>
 		<property name="spamWordsEnglish" value="sex, hard core, viagra, cialis, nigeria, you've won, million dollar"/>
-		<property name="spamWordsSpanish" value="sexo, ducro, viagra, cialis, nigeria, has ganado, millón de dólares"/>
+		<property name="spamWordsSpanish" value="sexo, duro, viagra, cialis, nigeria, has ganado, millón de dólares"/>
 		<property name="spamThreshold" value="2.50"/>
 	</bean>
 </beans>

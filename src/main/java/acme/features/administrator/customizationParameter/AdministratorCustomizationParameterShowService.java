@@ -38,9 +38,6 @@ public class AdministratorCustomizationParameterShowService implements AbstractS
 		assert request != null;
 
 		CustomizationParameter result;
-		//		int id = 1;
-		//
-		//		result = this.repository.findOneById(id);
 
 		result = this.repository.find();
 

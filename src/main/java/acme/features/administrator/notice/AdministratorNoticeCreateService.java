@@ -70,14 +70,14 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 
 		if (!errors.hasErrors("deadline")) {
 			if (entity.getDeadline() == null) {
-				errors.state(request, entity.getDeadline() != null, "deadline", "notice.requests.error.null");
+				errors.state(request, entity.getDeadline() != null, "deadline", "administrator.notice.error.null");
 			} else {
-				errors.state(request, !entity.getDeadline().before(new Date(System.currentTimeMillis())), "deadline", "notice.requests.error.futuro-deadline");
+				errors.state(request, !entity.getDeadline().before(new Date(System.currentTimeMillis())), "deadline", "administrator.notice.error.futuro-deadline");
 			}
 		}
 
 		if (!errors.hasErrors("checkbox")) {
-			errors.state(request, request.getModel().getBoolean("checkbox"), "checkbox", "notice.requests.error.must-confirm");
+			errors.state(request, request.getModel().getBoolean("checkbox"), "checkbox", "administrator.notice.error.must-confirm");
 		}
 	}
 
