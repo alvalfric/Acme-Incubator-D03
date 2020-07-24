@@ -46,8 +46,20 @@ master.menu.administrator = Administrator
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 
-master.menu.administrator.notice.list = List Notices
 master.menu.administrator.customization-parameter.show = Show Customization Parameters
+
+master.menu.administrator.notice.create = Create Notice
+master.menu.administrator.notice.list = List Notices
+master.menu.administrator.inquirie.create = Create Inquirie
+master.menu.administrator.inquirie.list = List Inquirie
+master.menu.administrator.overture.create = Create Overture
+master.menu.administrator.overture.list = List Overtures
+master.menu.administrator.technology-record.create = Create Technology Record
+master.menu.administrator.technology-record.list = List Technology Records
+master.menu.administrator.tool-record.create = Create Tool Record
+master.menu.administrator.tool-record.list = List Tool Records
+master.menu.administrator.challenge.create = Create Challenge
+master.menu.administrator.challenge.list = List Challenges
 
 # master.menu.authenticated ###################################################
 

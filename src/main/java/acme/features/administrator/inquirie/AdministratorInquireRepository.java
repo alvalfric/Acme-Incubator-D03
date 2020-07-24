@@ -2,7 +2,6 @@
 package acme.features.administrator.inquirie;
 
 import java.util.Collection;
-import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 
@@ -20,7 +19,7 @@ public interface AdministratorInquireRepository extends AbstractRepository {
 	@Query("select i from Inquirie i")
 	Collection<Inquirie> findManyAll();
 
-	@Query("select i from Inquirie i where i.deadline >= ?1")
-	Collection<Inquirie> findManyAllActive(Date date);
+	@Query("select i from Inquirie i where i.deadline >= CURRENT_TIMESTAMP")
+	Collection<Inquirie> findManyAllActive();
 
 }

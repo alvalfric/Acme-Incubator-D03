@@ -9,6 +9,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -35,7 +36,7 @@ public class Overture extends DomainEntity {
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	//@FutureOrPresent
+	@FutureOrPresent
 	private Date				deadline;
 
 	@NotBlank
