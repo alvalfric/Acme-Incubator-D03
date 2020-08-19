@@ -47,6 +47,9 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 
 master.menu.administrator.customization-parameter.show = Show Customization Parameters
+master.menu.administrator.dashboard.show = Show Dashboard
+master.menu.administrator.banner.list = List Banners
+master.menu.administrator.banner.create = Create Banner
 
 master.menu.administrator.notice.create = Create Notice
 master.menu.administrator.notice.list = List Notices

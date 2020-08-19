@@ -36,12 +36,16 @@
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-suboption code="master.menu.administrator.notice.list" action="/administrator/notice/list"/>
 			<acme:menu-suboption code="master.menu.administrator.customization-parameter.show" action="/administrator/customization-parameter/show"/>
+			<acme:menu-suboption code="master.menu.administrator.dashboard.show" action="/administrator/dashboard/show"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.banner.list" action="/administrator/banner/list"/>		
+			<acme:menu-suboption code="master.menu.administrator.banner.create" action="/administrator/banner/create"/>		
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.inquirie.list" action="/administrator/inquirie/list"/>		
 			<acme:menu-suboption code="master.menu.administrator.overture.list" action="/administrator/overture/list"/>		
 			<acme:menu-suboption code="master.menu.administrator.technology-record.list" action="/administrator/technology-record/list"/>		
 			<acme:menu-suboption code="master.menu.administrator.tool-record.list" action="/administrator/tool-record/list"/>		
-			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>		
+			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.notice.create" action="/administrator/notice/create"/>
 			<acme:menu-suboption code="master.menu.administrator.inquirie.create" action="/administrator/inquirie/create"/>

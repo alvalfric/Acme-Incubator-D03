@@ -30,6 +30,20 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `cvv` integer,
+        `brand` varchar(255),
+        `expiration_date` varchar(255),
+        `holder_name` varchar(255),
+        `number` varchar(255),
+        `picture` varchar(255),
+        `slogan` varchar(255),
+        `url` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
@@ -57,6 +71,7 @@
     create table `customization_parameter` (
        `id` integer not null,
         `version` integer not null,
+        `activity_sectors` varchar(255),
         `spam_threshold` double precision,
         `spam_words_english` varchar(255),
         `spam_words_spanish` varchar(255),
@@ -169,6 +184,10 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
+create index IDXdvftjmbbmrad2oe19yi4uuhyi on `inquirie` (`deadline`);
+create index IDXrcpel5hblr62lfjr9gmpk2wgi on `notice` (`deadline`);
+create index IDX3ianip0mmnj1316lpeas2yw71 on `overture` (`deadline`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);

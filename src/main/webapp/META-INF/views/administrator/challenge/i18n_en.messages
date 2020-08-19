@@ -16,4 +16,6 @@ administrator.challenge.form.button.update = Update
 administrator.challenge.form.button.delete = Delete
 administrator.challenge.form.button.return = Return
 
+administrator.challenge.form.label.deadline.placeholder = YYYY/MM/DD HH:mm
+
 administrator.challenge.error.deadline = Must be a date at least 1 month in the future

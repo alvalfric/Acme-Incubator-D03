@@ -1,0 +1,23 @@
+administrator.banner.form.label.picture = Pictur Url
+administrator.banner.form.label.slogan = Slogan
+administrator.banner.form.label.url = Target Url
+administrator.banner.form.label.creditCard = Credit Card:
+administrator.banner.form.label.holderName = Holder Name
+administrator.banner.form.label.number = Credit Card Number
+administrator.banner.form.label.brand = Credit Card Brand
+administrator.banner.form.label.expirationDate = Expiration Date
+administrator.banner.form.label.CVV = CVV
+
+administrator.banner.form.button.create = Create
+administrator.banner.form.button.update = Update
+administrator.banner.form.button.delete = Delete
+administrator.banner.form.button.return = Return
+
+administrator.banner.list.label.slogan = Slogan
+
+administrator.banner.error.field.empty = Must not be blank while inserting a credit card
+administrator.banner.error.number.number = Must be a number
+administrator.banner.error.number.invalid = Invalid number
+administrator.banner.error.expirationDate.format = Invalid format, must be month/year
+administrator.banner.error.expirationDate.valid = Must be in present or future
+administrator.banner.error.cvv.format = Must be three numbers

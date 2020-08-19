@@ -1,0 +1,23 @@
+administrator.banner.form.label.picture = Url Imagen
+administrator.banner.form.label.slogan = Eslogan
+administrator.banner.form.label.url = Url de Destino
+administrator.banner.form.label.creditCard = Tarjeta de Crédito:
+administrator.banner.form.label.holderName = Nombre del Titular
+administrator.banner.form.label.number = Número Tarjeta de Crédito
+administrator.banner.form.label.brand = Marca Tarjeta de Crédito
+administrator.banner.form.label.expirationDate = Fecha de Expiración
+administrator.banner.form.label.CVV = CVV
+
+administrator.banner.form.button.create = Crear
+administrator.banner.form.button.update = Actualizar
+administrator.banner.form.button.delete = Borrar
+administrator.banner.form.button.return = Volver
+
+administrator.banner.list.label.slogan = Eslogan
+
+administrator.banner.error.field.empty = No puede estar en blanco al insertar una tarjeta de crédito
+administrator.banner.error.number.number = Debe ser un número
+administrator.banner.error.number.invalid = Número inválido
+administrator.banner.error.expirationDate.format = Formato invalido, debe ser mes/año
+administrator.banner.error.expirationDate.valid = Debe estar en presente o en futuro
+administrator.banner.error.cvv.format = Debe ser tres números
