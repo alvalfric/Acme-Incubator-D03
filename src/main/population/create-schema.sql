@@ -33,7 +33,7 @@
     create table `banner` (
        `id` integer not null,
         `version` integer not null,
-        `cvv` integer,
+        `cvv` varchar(255),
         `brand` varchar(255),
         `expiration_date` varchar(255),
         `holder_name` varchar(255),

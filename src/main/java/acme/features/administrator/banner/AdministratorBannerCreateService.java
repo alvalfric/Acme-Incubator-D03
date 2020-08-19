@@ -62,32 +62,37 @@ public class AdministratorBannerCreateService implements AbstractCreateService<A
 		assert entity != null;
 		assert errors != null;
 
-		boolean creditCardField = !entity.getHolderName().isEmpty() || entity.getHolderName() != null || !entity.getNumber().isEmpty() || entity.getNumber() != null || !entity.getBrand().isEmpty() || entity.getBrand() != null
-			|| entity.getExpirationDate().isEmpty() || entity.getExpirationDate() != null || entity.getCVV() != null;
+		boolean creditCardFieldsEmpty = entity.getHolderName().isEmpty() && entity.getNumber().isEmpty() && entity.getBrand().isEmpty() && entity.getExpirationDate().isEmpty() && entity.getCVV().isEmpty();
 
 		if (!errors.hasErrors("holderName")) {
-			errors.state(request, !entity.getHolderName().isEmpty() && entity.getHolderName() != null && creditCardField, "holderName", "administrator.banner.error.field.empty");
+			if (!creditCardFieldsEmpty) {
+				errors.state(request, !entity.getHolderName().isEmpty(), "holderName", "administrator.banner.error.field.empty");
+			}
 		}
 
 		if (!errors.hasErrors("number")) {
-			errors.state(request, !entity.getNumber().isEmpty() && entity.getNumber() != null && creditCardField, "number", "administrator.banner.error.field.empty");
-
-			String regexNumber = "^[0-9]+$";
-			if (entity.getNumber().matches(regexNumber)) {
-				errors.state(request, this.checkLuhnCreditCardNumber(entity.getNumber()), "number", "administrator.banner.error.number.invalid");
+			String regexCreditCardNumber = "^(?:4[0-9]{12}(?:[0-9]{3})?|(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\\d{3})\\d{11})$";
+			if (entity.getNumber().isEmpty()) {
+				errors.state(request, creditCardFieldsEmpty, "number", "administrator.banner.error.field.empty");
+			} else if (entity.getNumber().matches("^[0-9]+$")) {
+				errors.state(request, this.checkLuhnCreditCardNumber(entity.getNumber()) && entity.getNumber().matches(regexCreditCardNumber), "number", "administrator.banner.error.number.invalid");
 			} else {
 				errors.state(request, false, "number", "administrator.banner.error.number.number");
 			}
 		}
 
 		if (!errors.hasErrors("brand")) {
-			errors.state(request, !entity.getBrand().isEmpty() && entity.getBrand() != null && creditCardField, "brand", "administrator.banner.error.field.empty");
+			if (!creditCardFieldsEmpty) {
+				errors.state(request, !entity.getBrand().isEmpty(), "brand", "administrator.banner.error.field.empty");
+			}
 		}
 
 		if (!errors.hasErrors("expirationDate")) {
-			errors.state(request, !entity.getExpirationDate().isEmpty() && entity.getExpirationDate() != null && creditCardField, "expirationDate", "administrator.banner.error.field.empty");
 
-			if (!entity.getExpirationDate().matches("^(0[1-9]|1[0-2])\\/20([0-9]{2})$")) {
+			if (entity.getExpirationDate().isEmpty() && entity.getExpirationDate() != null) {
+				errors.state(request, creditCardFieldsEmpty, "expirationDate", "administrator.banner.error.field.empty");
+			} else if (!entity.getExpirationDate().matches("^(0[1-9]|1[0-2])\\/20([0-9]{2})$")) {
+
 				errors.state(request, false, "expirationDate", "administrator.banner.error.expirationDate.format");
 			} else {
 				boolean validExpirationDate = false;
@@ -106,12 +111,13 @@ public class AdministratorBannerCreateService implements AbstractCreateService<A
 		}
 
 		if (!errors.hasErrors("CVV")) {
-			errors.state(request, entity.getCVV() != null && creditCardField, "CVV", "administrator.banner.error.field.empty");
-
-			if (entity.getCVV().toString().length() != 3) {
+			if (entity.getCVV().isEmpty() && entity.getCVV() != null) {
+				errors.state(request, creditCardFieldsEmpty, "CVV", "administrator.banner.error.field.empty");
+			} else if (entity.getCVV().toString().length() != 3) {
 				errors.state(request, false, "CVV", "administrator.banner.error.cvv.format");
 			}
 		}
+
 	}
 
 	@Override

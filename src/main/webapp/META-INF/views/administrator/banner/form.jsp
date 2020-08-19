@@ -9,7 +9,7 @@
 	<acme:form-textbox code="administrator.banner.form.label.url" path="url" placeholder="https://example.com/"/>
 	<b><acme:message code="administrator.banner.form.label.creditCard"/></b>
 	<br><br>
-	<acme:form-textbox code="administrator.banner.form.label.holderName" path="holderName" placeholder=""/>
+	<acme:form-textbox code="administrator.banner.form.label.holderName" path="holderName" placeholder="Holder Name"/>
 	<acme:form-integer code="administrator.banner.form.label.number" path="number" placeholder="1111111111111111"/>
 	<acme:form-textbox code="administrator.banner.form.label.brand" path="brand" placeholder="Brand"/>
 	<acme:form-textbox code="administrator.banner.form.label.expirationDate" path="expirationDate" placeholder="MM/YYYY"/>

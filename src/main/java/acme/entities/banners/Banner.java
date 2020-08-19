@@ -37,5 +37,5 @@ public class Banner extends DomainEntity {
 
 	private String				expirationDate;
 
-	private Integer				CVV;
+	private String				CVV;
 }
