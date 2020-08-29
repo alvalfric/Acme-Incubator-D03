@@ -9,10 +9,10 @@
     create table `alferez_bulletin` (
        `id` integer not null,
         `version` integer not null,
-        `author` varchar(255),
+        `author` varchar(256),
         `moment` datetime(6),
-        `type` varchar(255),
-        `url` varchar(255),
+        `type` varchar(256),
+        `url` varchar(4096),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -33,29 +33,29 @@
     create table `banner` (
        `id` integer not null,
         `version` integer not null,
-        `cvv` varchar(255),
-        `brand` varchar(255),
-        `expiration_date` varchar(255),
-        `holder_name` varchar(255),
-        `number` varchar(255),
-        `picture` varchar(255),
-        `slogan` varchar(255),
-        `url` varchar(255),
+        `cvv` varchar(4),
+        `brand` varchar(60),
+        `expiration_date` varchar(7),
+        `holder_name` varchar(60),
+        `number` varchar(16),
+        `picture` varchar(2048),
+        `slogan` varchar(256),
+        `url` varchar(2048),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `challenge` (
        `id` integer not null,
         `version` integer not null,
-        `average_goal` varchar(255),
-        `average_reward` varchar(255),
+        `average_goal` varchar(256),
+        `average_reward` varchar(256),
         `deadline` datetime(6),
-        `description` varchar(255),
-        `expert_goal` varchar(255),
-        `expert_reward` varchar(255),
-        `rookie_goal` varchar(255),
-        `rookie_reward` varchar(255),
-        `title` varchar(255),
+        `description` varchar(4096),
+        `expert_goal` varchar(256),
+        `expert_reward` varchar(256),
+        `rookie_goal` varchar(256),
+        `rookie_reward` varchar(256),
+        `title` varchar(256),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -71,53 +71,53 @@
     create table `customization_parameter` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sectors` varchar(255),
+        `activity_sectors` varchar(4096),
         `spam_threshold` double precision,
-        `spam_words_english` varchar(255),
-        `spam_words_spanish` varchar(255),
+        `spam_words_english` varchar(4096),
+        `spam_words_spanish` varchar(4096),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `inquirie` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
-        `contact_email` varchar(255),
+        `body` varchar(4096),
+        `contact_email` varchar(320),
         `creation` datetime(6),
         `deadline` datetime(6),
         `max_money_amount` double precision,
         `max_money_currency` varchar(255),
         `min_money_amount` double precision,
         `min_money_currency` varchar(255),
-        `title` varchar(255),
+        `title` varchar(256),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `notice` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(512),
+        `body` varchar(2048),
         `creation` datetime(6),
         `deadline` datetime(6),
-        `header_picture` varchar(255),
-        `related_link1` varchar(255),
-        `related_link2` varchar(255),
-        `title` varchar(255),
+        `header_picture` varchar(2048),
+        `related_link1` varchar(2048),
+        `related_link2` varchar(2048),
+        `title` varchar(256),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `overture` (
        `id` integer not null,
         `version` integer not null,
-        `body` varchar(255),
-        `contact_email` varchar(255),
+        `body` varchar(4096),
+        `contact_email` varchar(320),
         `creation` datetime(6),
         `deadline` datetime(6),
         `max_money_amount` double precision,
         `max_money_currency` varchar(255),
         `min_money_amount` double precision,
         `min_money_currency` varchar(255),
-        `title` varchar(255),
+        `title` varchar(256),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -133,37 +133,37 @@
     create table `shout` (
        `id` integer not null,
         `version` integer not null,
-        `author` varchar(255),
+        `author` varchar(1024),
         `moment` datetime(6),
-        `text` varchar(255),
+        `text` varchar(4096),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `technology_record` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
-        `description` varchar(255),
-        `email` varchar(255),
-        `inventor_name` varchar(255),
-        `source_type` varchar(255),
+        `activity_sector` varchar(256),
+        `description` varchar(4096),
+        `email` varchar(320),
+        `inventor_name` varchar(256),
+        `source_type` varchar(256),
         `stars` integer,
-        `title` varchar(255),
-        `website` varchar(255),
+        `title` varchar(256),
+        `website` varchar(2048),
         primary key (`id`)
     ) engine=InnoDB;
 
     create table `tool_record` (
        `id` integer not null,
         `version` integer not null,
-        `activity_sector` varchar(255),
-        `description` varchar(255),
-        `email` varchar(255),
-        `inventor_name` varchar(255),
-        `source_type` varchar(255),
+        `activity_sector` varchar(256),
+        `description` varchar(4096),
+        `email` varchar(320),
+        `inventor_name` varchar(256),
+        `source_type` varchar(256),
         `stars` integer,
-        `title` varchar(255),
-        `website` varchar(255),
+        `title` varchar(256),
+        `website` varchar(2048),
         primary key (`id`)
     ) engine=InnoDB;
 
